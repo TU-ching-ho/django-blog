@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+</head>
+
+<body>
+    <h1>Welcome to my blog</h1>
+    <hr>
+    {% for post in posts %}
+    <p style="font-family: 微軟正黑體; font-size: 16pt; font-weight: bold;">
+        <a href="/post/{{post.slug}}">{{post.title}}</a>
+    </p>
+
+    {% endfor %}
+
+    <h3>現在時刻:{{now}}</h3>
+</body>
+
+</html>
